@@ -4,6 +4,6 @@ python:
 install:
     - pip install . --upgrade
 script:
-    coverage run --source=pyrithm -m pytest
+    coverage run --source=NoTraffic -m pytest
 after_success:
     coveralls
