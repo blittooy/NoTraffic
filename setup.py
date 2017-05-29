@@ -6,12 +6,12 @@ def get_requirements():
         return f.read().splitlines()
 
 
-setup(name="NoTraffic",
+setup(name="StockHelper",
       version="0.0.0",
-      description="Traffic Analytics",
+      description="Stock Analytics",
       author="Bradford Littooy",
       author_email="bradlittooy@gmail.com",
-      url="https://github.com/blittooy/NoTraffic",
+      url="https://github.com/blittooy/StockHelper",
       license="MIT",
       packages=find_packages(),
       classifiers=[
