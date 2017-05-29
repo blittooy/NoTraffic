@@ -1,4 +1,4 @@
-# NoTraffic - Python Library For Traffic Analytics
+# NoTraffic - Python Library For Stock Analytics
 
 ## Requirements
 
