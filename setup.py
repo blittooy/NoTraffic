@@ -6,7 +6,7 @@ def get_requirements():
         return f.read().splitlines()
 
 
-setup(name="StockHelper",
+setup(name="stock_lib",
       version="0.0.0",
       description="Stock Analytics",
       author="Bradford Littooy",

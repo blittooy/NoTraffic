@@ -1,6 +1,6 @@
 import pytest
 
-from notraffic.traffic_lib.place_holder import *
+from StockHelper.etl_lib.place_holder import *
 
 
 def test_place_holder():
