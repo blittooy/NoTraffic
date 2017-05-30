@@ -1,6 +1,7 @@
 import requests
 import pandas as pd
 import bs4
+import numpy as np
 
 
 class StockMeta():
@@ -23,22 +24,23 @@ class StockMeta():
 
     def get_stock_meta_df(self):
         symbolslist = self.get_raw_symbols()
-        ticker_list = []
-        name_list = []
-        sector_list = []
-        sub_sector_list = []
-        date_added_list = []
+        tickers = []
+        names = []
+        sectors = []
+        sub_sectors = []
+        date_added = []
         for i, symbol in enumerate(symbolslist):
             tds = symbol.select('td')
-            ticker_list.append(tds[0].text),
-            name_list.append(tds[1].text)
-            sector_list.append(tds[3].text)
-            sub_sector_list.append(tds[4].text)
-            date_added_list.append(tds[6].text)
-        return pd.DataFrame([name_list, sector_list,
-                             sub_sector_list, date_added_list],
+            tickers.append(tds[0].text),
+            names.append(tds[1].text)
+            sectors.append(tds[3].text)
+            sub_sectors.append(tds[4].text)
+            date_added.append(tds[6].text)
+            input_data = np.transpose([tickers, names, sectors,
+                                       sub_sectors, date_added])
+        return pd.DataFrame(input_data,
                             columns=['ticker', 'name', 'sector', 'sub_sector',
-                                     'date_added_list'])
+                                     'date_added'])
 
     def get_raw_symbols(self):
         txt = self.get_text_data()

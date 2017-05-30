@@ -1,4 +1,4 @@
-# NoTraffic - Python Library For Stock Analytics
+# StockHelper - Python Library For Stock Analytics
 
 ## Requirements
 
